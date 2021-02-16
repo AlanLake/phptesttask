@@ -1,7 +1,6 @@
 <?php
 
-$pdo = new PDO('mysql:host=localhost;port=3306;dbname=testtaskneva', 'root', '');
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+require_once './db.php';
 
 $id = $_POST['id'] ?? null;
 if (!$id) {

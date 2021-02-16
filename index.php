@@ -1,8 +1,7 @@
 <?php
 
 
-$pdo = new PDO('mysql:host=localhost;port=3306;dbname=testtaskneva', 'root', '');
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+require_once './db.php';
 
 $statement = $pdo->prepare('SELECT * FROM orders ORDER BY id ASC');
 $statement->execute();
@@ -72,7 +71,6 @@ $orders = $statement->fetchAll(PDO::FETCH_ASSOC);
                 <td><?php echo $order['equal_price'] ?></td>
                 <td><?php echo $order['created'] ?></td>
                 <td>
-                    <a href="update.php?id=<?php echo $order['id'] ?>" class="btn btn-sm btn-outline-primary">Edit</a>
                     <form method="post" action="delete.php" style="display: inline-block">
                         <input type="hidden" name="id" value="<?php echo $order ['id'] ?>" />
                         <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>

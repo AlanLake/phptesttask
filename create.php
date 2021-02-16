@@ -2,8 +2,7 @@
 
 require_once "utility_func.php";
 
-$pdo = new PDO('mysql:host=localhost;port=3306;dbname=testtaskneva', 'root', '');
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+require_once './db.php';
 
 $errors = [];
 
@@ -96,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $statement->bindValue(':barcode', $barcode);
         $statement-> bindValue(':user_id', $user_id);
         $statement->execute();
-        // header('Location: index.php');
+        header('Location: index.php');
     }
     
     

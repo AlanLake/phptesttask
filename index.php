@@ -71,7 +71,7 @@ $orders = $statement->fetchAll(PDO::FETCH_ASSOC);
                 <td><?php echo $order['equal_price'] ?></td>
                 <td><?php echo $order['created'] ?></td>
                 <td>
-                    <form method="post" action="delete.php" style="display: inline-block">
+                    <form method="post" action='delete.php' style="display: inline-block">
                         <input type="hidden" name="id" value="<?php echo $order ['id'] ?>" />
                         <button type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
                     </form>

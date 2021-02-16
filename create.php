@@ -61,13 +61,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
        
     
-    $ticket_adult_total = $ticket_adult_price * $ticket_adult_quantity;
-    $ticket_kid_total = $ticket_kid_price * $ticket_kid_quantity;
-    $ticket_group_total = $ticket_group_price * $ticket_group_quantity;
-    $ticket_discount_total = $ticket_discount_price * $ticket_discount_quantity;
-    $equal_price = $ticket_adult_total + $ticket_kid_total + $ticket_group_total + $ticket_discount_total;
+    $ticket_adult_total = (int)$ticket_adult_price * (int)$ticket_adult_quantity;
+    $ticket_kid_total = (int)$ticket_kid_price * (int)$ticket_kid_quantity;
+    $ticket_group_total = (int)$ticket_group_price * (int)$ticket_group_quantity;
+    $ticket_discount_total = (int)$ticket_discount_price * (int)$ticket_discount_quantity;
+    $equal_price = (int)$ticket_adult_total + (int)$ticket_kid_total + (int)$ticket_group_total + (int)$ticket_discount_total;
 
-    $total_ticket_quantity = $ticket_adult_quantity + $ticket_kid_quantity  + $ticket_group_quantity + $ticket_discount_quantity;
+    $total_ticket_quantity = (int)$ticket_adult_quantity + (int)$ticket_kid_quantity  + (int)$ticket_group_quantity + (int)$ticket_discount_quantity;
     
     for($i = 1; $i <= $total_ticket_quantity; $i++){
         array_push($barcode, randomNumber(8));

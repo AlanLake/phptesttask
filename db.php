@@ -10,7 +10,7 @@
     $user = 'b579f94d90714d';
     $pass = 'c0a0634d';
 
-    $dsn = `mysql:host=$host;dbname=$db;charset=$charset`;
+    $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 
 
 $pdo = new PDO($dsn, $user, $pass);

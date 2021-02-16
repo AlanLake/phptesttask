@@ -1,7 +1,7 @@
 <?php
 
 
-require_once './db.php';
+require_once 'db.php';
 
 $statement = $pdo->prepare('SELECT * FROM orders ORDER BY id ASC');
 $statement->execute();

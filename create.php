@@ -2,7 +2,7 @@
 
 require_once "utility_func.php";
 
-require_once './db.php';
+require_once 'db.php';
 
 $errors = [];
 

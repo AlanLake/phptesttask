@@ -4,7 +4,7 @@
     // $db = 'testtaskneva';
     // $user = 'root';
     // $pass = '';
-    // $charset = 'utf8mb4';
+    $charset = 'utf8mb4';
     $host = 'eu-cdbr-west-03.cleardb.net';
     $db = 'heroku_6a09d810afc907f';
     $user = 'b579f94d90714d';
